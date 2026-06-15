@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>West Phoenix Transit Accessibility Gaps Dashboard | Kassam Abutarboush</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <header>
+      <div class="logo">Kassam Abutarboush</div>
+
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="project-hero">
+        <p class="eyebrow">Transportation GIS</p>
+        <h1>West Phoenix Transit Accessibility Gaps Dashboard</h1>
+        <h2>Phoenix, Arizona</h2>
+
+        <p>
+          This project identifies high-need areas in West Phoenix where limited household vehicle access
+          overlaps with weaker nearby transit access. The final dashboard highlights block groups where
+          transportation disadvantage may require additional planning attention.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="https://asu.maps.arcgis.com/apps/dashboards/a3f717a446064620bc770a56c51ed914" target="_blank" rel="noopener noreferrer" class="primary-button">
+            View Interactive Dashboard
+          </a>
+          <a href="index.html#projects" class="secondary-button">Back to Projects</a>
+        </div>
+      </section>
+
+      <section class="project-image-section">
+        <img src="Transit_Access_Gaps_WestPhoenix.png" alt="West Phoenix Transit Accessibility Gaps Dashboard" class="full-project-image">
+      </section>
+
+      <section class="project-details">
+
+        <div class="detail-card">
+          <h2>Project Goal</h2>
+          <p>
+            The goal of this project was to locate census block groups where residents may face higher
+            transportation vulnerability due to limited vehicle access and weaker proximity to bus stops.
+            The dashboard presents these areas in a clear format for planning and communication.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <h2>GIS Methods</h2>
+
+          <ul>
+            <li>Prepared census block group data for the West Phoenix study area.</li>
+            <li>Used ACS vehicle availability data to identify areas with higher no-vehicle households.</li>
+            <li>Created transit access buffers around bus stop locations.</li>
+            <li>Identified block groups outside the selected transit access distance.</li>
+            <li>Intersected high no-vehicle areas with weaker transit access areas.</li>
+            <li>Published the results to ArcGIS Online and configured an interactive dashboard.</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h2>Data Sources</h2>
+
+          <ul>
+            <li>U.S. Census Bureau ACS vehicle availability data</li>
+            <li>Census block group geography</li>
+            <li>Valley Metro bus stop data</li>
+            <li>City / regional GIS reference layers</li>
+            <li>Esri basemap and ArcGIS Online web mapping tools</li>
+          </ul>
+        </div>
+
+        <div class="detail-card">
+          <h2>Skills Demonstrated</h2>
+
+          <div class="mini-skills-list">
+            <span>ArcGIS Pro</span>
+            <span>ArcGIS Online</span>
+            <span>ArcGIS Dashboards</span>
+            <span>Transit Access Analysis</span>
+            <span>Buffer Analysis</span>
+            <span>Spatial Joins</span>
+            <span>ACS Data</span>
+            <span>Data Cleaning</span>
+            <span>Web Map Publishing</span>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <h2>Key Takeaway</h2>
+          <p>
+            Transit access gaps are most important when they overlap with households that may rely more heavily
+            on public transportation. This project shows how GIS can identify places where transportation access,
+            household need, and planning priorities intersect.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <h2>Limitations</h2>
+          <p>
+            This analysis uses proximity to bus stops as a basic measure of access and does not fully account for
+            route frequency, service hours, sidewalk quality, travel time, safety, or actual rider experience.
+            The dashboard should be interpreted as a screening tool for identifying areas that may deserve
+            closer transportation planning review.
+          </p>
+        </div>
+
+        <div class="back-link">
+          <a href="index.html#projects">Back to Projects</a>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 Kassam Abutarboush</p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/kassam-abutarboush-896186277" target="_blank">LinkedIn</a>
+        <a href="mailto:kassam2828@gmail.com">Email</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
