@@ -214,8 +214,35 @@ section h2 {
 
 /* Skills */
 #skills {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skill-category-card {
+  background-color: #0b1118;
+  border: 1px solid #273547;
+  padding: 28px;
+  min-height: 260px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.skill-category-card:hover {
+  border-color: #38bdf8;
+  background-color: #0e1722;
+  transform: translateY(-4px);
+}
+
+.skill-category-card h3 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 18px;
+  letter-spacing: -0.4px;
 }
 
 .skills-list {
@@ -225,7 +252,7 @@ section h2 {
 }
 
 .skills-list span {
-  background-color: #0b1118;
+  background-color: #101820;
   color: #d8e1ea;
   border: 1px solid #273547;
   border-radius: 0;
@@ -677,7 +704,8 @@ footer {
   .about-content,
   .education-grid,
   .contact-content,
-  .project-details {
+  .project-details,
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 
@@ -687,6 +715,10 @@ footer {
 
   section {
     padding: 45px 25px;
+  }
+
+  .skill-category-card {
+    min-height: auto;
   }
 
   .project-card img {
