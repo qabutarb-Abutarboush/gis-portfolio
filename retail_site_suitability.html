@@ -35,9 +35,11 @@
         <h2>Tempe, Arizona</h2>
 
         <p>
-          This project uses parcel data, land use context, accessibility measures, and population indicators
-          to rank potential retail sites in Tempe, Arizona. The final output is an interactive ArcGIS Dashboard
-          designed to support site comparison and location-based decision making.
+          This project evaluates candidate retail parcels in Tempe using a weighted GIS suitability model.
+          Parcel characteristics, zoning and land use, development status, population, and measured proximity
+          to roads, bus stops, and light rail were converted into standardized scores and combined into a
+          Retail Suitability Index. The final results were published to an interactive ArcGIS Dashboard for
+          parcel-by-parcel comparison.
         </p>
 
         <div class="hero-buttons">
@@ -57,9 +59,10 @@
         <div class="detail-card">
           <h2>Project Goal</h2>
           <p>
-            The goal of this project was to identify and rank candidate retail parcels using a GIS-based
-            suitability workflow. The dashboard helps compare sites based on surrounding population,
-            transportation access, parcel characteristics, and land use context.
+            The goal was to screen and rank candidate parcels for relative retail suitability using a
+            repeatable parcel-level scoring model. Rather than relying on a single factor, the analysis
+            compared each parcel using physical size, zoning, land use, development status, surrounding
+            population, and transportation accessibility.
           </p>
         </div>
 
@@ -67,12 +70,12 @@
           <h2>GIS Methods</h2>
 
           <ul>
-            <li>Prepared and cleaned parcel-level GIS data for suitability analysis.</li>
-            <li>Used distance-based analysis to evaluate access to roads, bus stops, and light rail.</li>
-            <li>Filtered parcels based on land use and development suitability conditions.</li>
-            <li>Created scoring fields to rank parcels using multiple suitability indicators.</li>
-            <li>Classified parcels into readable suitability categories for comparison.</li>
-            <li>Published the results as a hosted web layer and configured an ArcGIS Dashboard.</li>
+            <li>Prepared a candidate parcel layer with parcel area, zoning, land use, development status, and population attributes.</li>
+            <li>Calculated parcel proximity in feet to Valley Metro bus stops, major roads, and light rail.</li>
+            <li>Converted eight suitability factors into standardized 1–5 score fields: size, zoning, bus access, road access, light rail access, land use, development status, and population.</li>
+            <li>Calculated a weighted Retail Suitability Index: 5% size, 15% zoning, 10% bus access, 15% road access, 5% light rail access, 20% land use, 15% development status, and 15% population.</li>
+            <li>Classified final index values into Low, Moderate, High, Very High, and Excellent suitability classes.</li>
+            <li>Published the scored candidate parcels as a hosted web layer and configured an ArcGIS Dashboard for interactive site comparison.</li>
           </ul>
         </div>
 
@@ -80,10 +83,10 @@
           <h2>Data Sources</h2>
 
           <ul>
-            <li>City of Tempe GIS data</li>
+            <li>City of Tempe GIS / Open Data</li>
             <li>Maricopa County parcel and reference data</li>
-            <li>Valley Metro transit access data</li>
-            <li>U.S. Census Bureau ACS population data</li>
+            <li>Valley Metro transit data</li>
+            <li>U.S. Census Bureau ACS population and TIGER/Line geography</li>
             <li>Esri basemap and ArcGIS Online web mapping tools</li>
           </ul>
         </div>
@@ -96,10 +99,11 @@
             <span>ArcGIS Online</span>
             <span>ArcGIS Dashboards</span>
             <span>Parcel Analysis</span>
-            <span>Spatial Analysis</span>
-            <span>Near / Distance Analysis</span>
+            <span>Distance Analysis</span>
+            <span>Attribute Joins</span>
             <span>Field Calculations</span>
-            <span>Suitability Scoring</span>
+            <span>Weighted Suitability Modeling</span>
+            <span>Data Classification</span>
             <span>Hosted Feature Layers</span>
           </div>
         </div>
@@ -107,9 +111,10 @@
         <div class="detail-card">
           <h2>Key Takeaway</h2>
           <p>
-            Retail suitability is not based on one factor alone. This project shows how GIS can combine
-            parcel conditions, accessibility, land use, and population context into a practical decision-support
-            tool for comparing candidate sites.
+            The project demonstrates a complete suitability workflow: assembling parcel-level variables,
+            measuring accessibility, standardizing different criteria to a common 1–5 scale, applying explicit
+            weights, and converting the final index into clear suitability classes. The result is a transparent
+            screening model that can be inspected parcel by parcel rather than a map based on subjective visual judgment.
           </p>
         </div>
 
