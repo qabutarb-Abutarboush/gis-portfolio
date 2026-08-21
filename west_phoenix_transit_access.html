@@ -35,9 +35,10 @@
         <h2>Phoenix, Arizona</h2>
 
         <p>
-          This project identifies high-need areas in West Phoenix where limited household vehicle access
-          overlaps with weaker nearby transit access. The final dashboard highlights block groups where
-          transportation disadvantage may require additional planning attention.
+          This project identifies potential transit-access gaps in West Phoenix by comparing household vehicle
+          availability with proximity to public transit. Census block groups with more than 15% of households
+          lacking a vehicle were evaluated against a 0.25-mile transit access area, then mapped in an ArcGIS
+          Dashboard to highlight higher-need locations.
         </p>
 
         <div class="hero-buttons">
@@ -57,9 +58,9 @@
         <div class="detail-card">
           <h2>Project Goal</h2>
           <p>
-            The goal of this project was to locate census block groups where residents may face higher
-            transportation vulnerability due to limited vehicle access and weaker proximity to bus stops.
-            The dashboard presents these areas in a clear format for planning and communication.
+            The goal was to identify census block groups where limited household vehicle access coincides with
+            weaker nearby transit access. Areas were treated as higher need when more than 15% of households
+            reported no vehicle and the block group fell outside the selected 0.25-mile transit access area.
           </p>
         </div>
 
@@ -67,12 +68,12 @@
           <h2>GIS Methods</h2>
 
           <ul>
-            <li>Prepared census block group data for the West Phoenix study area.</li>
-            <li>Used ACS vehicle availability data to identify areas with higher no-vehicle households.</li>
-            <li>Created transit access buffers around bus stop locations.</li>
-            <li>Identified block groups outside the selected transit access distance.</li>
-            <li>Intersected high no-vehicle areas with weaker transit access areas.</li>
-            <li>Published the results to ArcGIS Online and configured an interactive dashboard.</li>
+            <li>Prepared U.S. Census block group geography for the West Phoenix study area.</li>
+            <li>Joined 2024 ACS vehicle availability data and calculated the percentage of households without access to a vehicle.</li>
+            <li>Separated block groups with null ACS values so missing data would not be interpreted as zero vehicle need.</li>
+            <li>Combined Valley Metro transit stop data and created a 0.25-mile buffer to represent nearby transit access.</li>
+            <li>Identified higher-need block groups where more than 15% of households lacked a vehicle and the area was outside the 0.25-mile transit access zone.</li>
+            <li>Exported the qualifying areas as a Transit Deserts layer, then published the results to ArcGIS Online and configured an interactive dashboard.</li>
           </ul>
         </div>
 
@@ -80,10 +81,9 @@
           <h2>Data Sources</h2>
 
           <ul>
-            <li>U.S. Census Bureau ACS vehicle availability data</li>
-            <li>Census block group geography</li>
-            <li>Valley Metro bus stop data</li>
-            <li>City / regional GIS reference layers</li>
+            <li>U.S. Census Bureau 2024 ACS vehicle availability data</li>
+            <li>U.S. Census Bureau TIGER/Line block group geography</li>
+            <li>Valley Metro transit stop data</li>
             <li>Esri basemap and ArcGIS Online web mapping tools</li>
           </ul>
         </div>
@@ -107,9 +107,10 @@
         <div class="detail-card">
           <h2>Key Takeaway</h2>
           <p>
-            Transit access gaps are most important when they overlap with households that may rely more heavily
-            on public transportation. This project shows how GIS can identify places where transportation access,
-            household need, and planning priorities intersect.
+            The analysis narrows a broad transit-access question into a clear screening rule: areas with relatively
+            high no-vehicle households and no transit stop within the selected 0.25-mile access threshold receive
+            greater planning attention. GIS made it possible to combine demographic need and transit proximity into
+            one mapped decision-support layer.
           </p>
         </div>
 
