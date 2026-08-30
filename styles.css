@@ -293,25 +293,38 @@ section h2 {
 /* Education */
 .education-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  align-items: stretch;
 }
 
 .education-card {
   background-color: #0b1118;
-  padding: 26px;
-  border-radius: 0;
+  padding: 28px;
   border: 1px solid #273547;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+  background-color: #0e1722;
+  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.12);
 }
 
 .education-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 21px;
+  margin-bottom: 12px;
   color: #38bdf8;
 }
 
 .education-card p {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 15px;
   color: #c7d0da;
 }
@@ -321,7 +334,7 @@ section h2 {
 }
 
 .education-card li {
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   font-size: 15px;
   color: #c7d0da;
 }
@@ -818,15 +831,14 @@ footer {
     padding: 22px;
   }
 
-  .about-content,
-  .education-grid,
   .contact-content,
   .project-details,
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card {
+  .project-card,
+  .education-card {
     flex: 0 0 82vw;
   }
 
